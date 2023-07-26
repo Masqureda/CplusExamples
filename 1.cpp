@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-	string isim = "Ali cabbar";
+	string isim = "Kadir Köroğlu";
 	int yas = 20;
 
 	cout << isim << endl << yas;
