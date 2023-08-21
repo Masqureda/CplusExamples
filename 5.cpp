@@ -1,30 +1,40 @@
 int main() {
-	int sayi1, sayi2, secilenıslem, sonuc;
-	cout << "lutfen 1. sayiyi giriniz :";
-	cin >> sayi1;
-	cout << "lutfen 2. sayiyi giriniz :";
-	cin >> sayi2; 
+	int sayi1, sayi2, secilenislem, sonuc;
+	sonuc = -1;
 
-	cout << "lutfen isleminizi seciniz (1:+ 2:- 3:* 4:/): ";
-	cin >> secilenıslem;
+	cout << "Lutfen 1. sayiyi giriniz: ";
+	cin >> sayi1;
+	cout << "Lutfen 2. sayiyi giriniz: ";
+	cin >> sayi2;
+
+	cout << "Lutfen isleminizi seciniz (1:+ 2:- 3:* 4:/): ";
+	cin >> secilenislem;
 	cout << endl;
-	
-	if (secilenıslem == 1) {
+
+	if (secilenislem == 1) {
 		sonuc = sayi1 + sayi2;
 	}
-	else if (secilenıslem == 2) {
-		sonuc == sayi1 - sayi2;
+	else if (secilenislem == 2) {
+		sonuc = sayi1 - sayi2;
 	}
-	else if (secilenıslem == 3) {
-		sonuc == sayi1 * sayi2;
+	else if (secilenislem == 3) {
+		sonuc = sayi1 * sayi2;
 	}
-	else if (secilenıslem == 4) {
-		sonuc == sayi1 / sayi2;
+	else if (secilenislem == 4) {
+		if (sayi2 != 0) {  
+			sonuc = sayi1 / sayi2;
+		}
+		else {
+			cout << "Bolme isleminde ikinci sayi 0 olamaz." << endl;
+		}
 	}
 	else {
-		cout << "lutfen 1-4 arasi bir sayi giriniz";
+		cout << "Lutfen 1-4 arasi bir sayi giriniz." << endl;
 	}
-	cout << "isleminizin sonucu = " << sonuc;
+
+	if (sonuc != -1) {
+		cout << "Sonuc: " << sonuc << endl;
+	}
 
 	return 0;
 }
